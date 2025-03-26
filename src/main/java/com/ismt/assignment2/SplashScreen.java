@@ -4,7 +4,9 @@
  */
 package com.ismt.assignment2;
 
+import java.awt.Dimension;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.net.URL;
 import javax.swing.ImageIcon;
@@ -20,7 +22,11 @@ public class SplashScreen extends javax.swing.JFrame {
      * Creates new form SplashScreen
      */
     public SplashScreen() {
+        
+        this.setUndecorated(true); 
         initComponents();
+                CenteredFrame(this);  // <--- Here ya go.
+
     }
 
     /**
@@ -46,7 +52,7 @@ public class SplashScreen extends javax.swing.JFrame {
         jLabel2.setText("Loading Files....");
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel3.setText("Welcome To RentApp");
+        jLabel3.setText("Welcome To WeAreCars");
 
         jLabel4.setText("How to use App");
 
@@ -123,6 +129,12 @@ if (imageUrl == null) {
         };
         timer1 = new Timer(50, al);
         timer1.start();
+    }
+        public void CenteredFrame(javax.swing.JFrame objFrame){
+        Dimension objDimension = Toolkit.getDefaultToolkit().getScreenSize();
+        int iCoordX = (objDimension.width - objFrame.getWidth()) / 2;
+        int iCoordY = (objDimension.height - objFrame.getHeight()) / 2;
+        objFrame.setLocation(iCoordX, iCoordY); 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

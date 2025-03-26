@@ -4,30 +4,63 @@
  */
 package com.ismt.assignment2;
 
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Vector;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author rajeshadhikari
  */
-public class BookingScreen extends javax.swing.JFrame {
+public class BookingScreen extends javax.swing.JFrame implements ActionListener {
 
-    String carTypes[] = {"Please Select","City Car", "Family Car (+$50)", "Sports Car (+$75)", "SUV (+$65)"};
-    String fuleTypes[] = {"Please Select","Petrol", "Diesel", "Hybrid (+$30)", "Full Electric (+$50)"};
+    String carTypes[] = {"Please Select", "City Car", "Family Car (+£50)", "Sports Car (+£75)", "SUV (+£65)"};
+    String fuleTypes[] = {"Please Select", "Petrol", "Diesel", "Hybrid (+£30)", "Full Electric (+£50)"};
+    int rent = 0;
+    JDialog d;
 
     /**
      * Creates new form BookingScreen
      */
     public BookingScreen() {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+//this.setUndecorated(true);
+        
+        
         buttonGroup1.add(rb_valid_license);
         buttonGroup1.add(rb_invalid_license);
         cb_car_type.removeAllItems();
         cb_fule_type.removeAllItems();
+
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = dateTime.format(myFormatObj);
+        lb_date.setText("Date: " + formattedDate);
 
         for (String e : carTypes) {
             cb_car_type.addItem(e);
@@ -58,7 +91,7 @@ public class BookingScreen extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lb_date = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -81,17 +114,26 @@ public class BookingScreen extends javax.swing.JFrame {
         bt_book_car = new javax.swing.JButton();
         tf_no_of_days = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel1.setText("WeAreCars");
 
-        jLabel2.setText("Welcome: ");
+        jLabel2.setText("Welcome: sta001");
 
-        jLabel3.setText("Date: ");
+        lb_date.setText("Date: ");
 
         jLabel4.setText("First Name:*");
 
@@ -140,10 +182,10 @@ public class BookingScreen extends javax.swing.JFrame {
 
         jLabel10.setText("Type Of Fule:*");
 
-        check_milage.setText("Unlimited Milage ( +$10)");
+        check_milage.setText("Unlimited Milage ( +£10)");
         check_milage.setPreferredSize(new java.awt.Dimension(93, 32));
 
-        check_coverage.setText("Breakdown Cover ( +$2)");
+        check_coverage.setText("Breakdown Cover ( +£2)");
         check_coverage.setPreferredSize(new java.awt.Dimension(93, 42));
 
         bt_book_car.setText("Book Now");
@@ -162,6 +204,13 @@ public class BookingScreen extends javax.swing.JFrame {
         });
 
         jLabel11.setText("Number Of Days:*");
+
+        jButton1.setText("Clear Fields");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -212,6 +261,8 @@ public class BookingScreen extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bt_book_car, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -255,8 +306,10 @@ public class BookingScreen extends javax.swing.JFrame {
                     .addComponent(check_milage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(check_coverage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
-                .addComponent(bt_book_car, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bt_book_car, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Add Booking", jPanel1);
@@ -309,7 +362,7 @@ public class BookingScreen extends javax.swing.JFrame {
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(lb_date)
                 .addGap(22, 22, 22))
             .addComponent(jTabbedPane1)
         );
@@ -320,7 +373,7 @@ public class BookingScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                    .addComponent(lb_date))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane1))
         );
@@ -379,7 +432,7 @@ public class BookingScreen extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "First name is required");
             return;
         }
-         if (tf_name.getText().length()<3) {
+        if (tf_name.getText().length() < 3) {
             JOptionPane.showMessageDialog(rootPane, "First name is too short");
             return;
         }
@@ -411,24 +464,150 @@ public class BookingScreen extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Sorry!! License is invalid can't rent a car");
             return;
         }
-        if (cb_car_type.getSelectedIndex()==0) {
+        if (cb_car_type.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(rootPane, "Please select car type");
             return;
         }
-        if (cb_fule_type.getSelectedIndex()==0) {
+        if (cb_fule_type.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(rootPane, "Please select fule type");
             return;
         }
-        if(tf_no_of_days.getText().isBlank() ||tf_no_of_days.getText().isBlank()){
+        if (tf_no_of_days.getText().isBlank() || tf_no_of_days.getText().isBlank()) {
             JOptionPane.showMessageDialog(rootPane, "No of day's is required");
             return;
         }
-        if(Integer.parseInt(tf_no_of_days.getText()) < 1 ||Integer.parseInt(tf_no_of_days.getText()) > 28){
+        if (Integer.parseInt(tf_no_of_days.getText()) < 1 || Integer.parseInt(tf_no_of_days.getText()) > 28) {
             JOptionPane.showMessageDialog(rootPane, "No of day's should be from 1 to 28");
             return;
         }
-            System.out.println("Add Date");
+
+        rent = Integer.parseInt(tf_no_of_days.getText()) * 25;
+        if (check_coverage.isSelected()) {
+            rent = rent + (Integer.parseInt(tf_no_of_days.getText()) * 2);
+        }
+        if (check_milage.isSelected()) {
+            rent = rent + (Integer.parseInt(tf_no_of_days.getText()) * 10);
+        }
+        if (cb_car_type.getSelectedIndex() == 2) {
+            rent = rent + 50;
+        }
+        if (cb_car_type.getSelectedIndex() == 3) {
+            rent = rent + 75;
+
+        }
+        if (cb_car_type.getSelectedIndex() == 4) {
+            rent = rent + 65;
+        }
+        if (cb_fule_type.getSelectedIndex() == 3) {
+            rent = rent + 30;
+        }
+        if (cb_fule_type.getSelectedIndex() == 4) {
+            rent = rent + 50;
+        }
+
+        String messsageText = "<html><br/>First Name: " + tf_name.getText() + "<br/>" + "Surname: " + tf_surname.getText()
+                + "<br/>" + "Address: " + tf_address.getText() + "<br/>" + "Age: " + tf_age.getText() + "<br/>" + "No Of Days: " + tf_no_of_days.getText()
+                + "<br/>" + "Car Type: " + cb_car_type.getSelectedItem() + "<br/>" + "Fule Type: " + cb_fule_type.getSelectedItem()
+                + "<br/>" + "Unlimited Milage: " + check_milage.isSelected() + "<br/>" + "Breakdown Cover: " + check_coverage.isSelected()
+                + "<br/><br/></html>";
+
+        d = new JDialog(this, "Confirm Booking");
+
+// create first label with centered alignment, bold, and larger font
+        JLabel l1 = new JLabel(messsageText, SwingConstants.CENTER);
+//        l1.setFont(new Font("SansSerif", Font.BOLD, 18));
+
+// create second label with centered alignment, bold, and larger font
+        JLabel l2 = new JLabel("Total: £" + rent, SwingConstants.CENTER);
+        l2.setFont(new Font("SansSerif", Font.BOLD, 18));
+
+// create two buttons
+        JButton b1 = new JButton("Confirm");
+//        JButton b2 = new JButton("Cancel");
+
+// add Action Listeners
+        b1.addActionListener(BookingScreen.this);
+//        b2.addActionListener(BookingScreen.this);
+
+// create a panel for buttons with centered alignment
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5)); // Reduced vertical gap
+        buttonPanel.add(b1);
+//        buttonPanel.add(b2);
+
+// create a panel for labels with minimal vertical spacing
+        JPanel labelPanel = new JPanel();
+        labelPanel.setLayout(new BoxLayout(labelPanel, BoxLayout.Y_AXIS));
+        l1.setAlignmentX(Component.CENTER_ALIGNMENT); // Ensure center alignment
+        l2.setAlignmentX(Component.CENTER_ALIGNMENT);
+        labelPanel.add(l1);
+        labelPanel.add(Box.createVerticalStrut(5)); // Small 5-pixel gap between labels
+        labelPanel.add(l2);
+
+// create main panel with BorderLayout
+        JPanel mainPanel = new JPanel(new BorderLayout(0, 5)); // 5-pixel vertical gap between regions
+        mainPanel.add(labelPanel, BorderLayout.NORTH);    // Labels at top
+        mainPanel.add(buttonPanel, BorderLayout.CENTER);  // Buttons below
+
+// add main panel to dialog
+        d.add(mainPanel);
+
+// set size of dialog
+        d.setSize(400, 500);  // Reduced height since gaps are smaller
+
+// set visibility of dialog
+        d.setVisible(true);
+
     }//GEN-LAST:event_bt_book_carActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            FileInputStream file = new FileInputStream("file.bin");
+            ObjectInputStream input = new ObjectInputStream(file);
+            // Method for deserialization of object
+            Vector<Vector> tableData = (Vector<Vector>) input.readObject();
+
+            input.close();
+            file.close();
+
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            for (int i = 0; i < tableData.size(); i++) {
+                Vector row = tableData.get(i);
+                model.addRow(new Object[]{row.get(0), row.get(1), row.get(2), row.get(3),
+                    row.get(4), row.get(5), row.get(6), row.get(7), row.get(8),
+                    row.get(9), row.get(10), row.get(11)});
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_formWindowOpened
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        Vector<Vector> tableData = model.getDataVector();
+
+        //Saving of object in a file
+        try {
+            FileOutputStream file = new FileOutputStream("file.bin");
+            ObjectOutputStream output = new ObjectOutputStream(file);
+
+            // Method for serialization of object
+            output.writeObject(tableData);
+
+            output.close();
+            file.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_formWindowClosing
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        clearFields();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_book_car;
@@ -437,11 +616,11 @@ public class BookingScreen extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_fule_type;
     private javax.swing.JCheckBox check_coverage;
     private javax.swing.JCheckBox check_milage;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -453,6 +632,7 @@ public class BookingScreen extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lb_date;
     private javax.swing.JRadioButton rb_invalid_license;
     private javax.swing.JRadioButton rb_valid_license;
     private javax.swing.JTextField tf_address;
@@ -461,4 +641,44 @@ public class BookingScreen extends javax.swing.JFrame {
     private javax.swing.JTextField tf_no_of_days;
     private javax.swing.JTextField tf_surname;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        LocalDateTime dateTime = LocalDateTime.now();
+//        System.out.println(dateTime);
+//        System.out.println("Before formatting: " + dateTime);
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+        String formattedDate = dateTime.format(myFormatObj);
+
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.addRow(new Object[]{tf_name.getText(), tf_surname.getText(), tf_address.getText(), tf_age.getText(),
+            rb_valid_license.isSelected(), tf_no_of_days.getText(), cb_car_type.getSelectedItem(), cb_fule_type.getSelectedItem(),
+            check_milage.isSelected(), check_coverage.isSelected(), rent, formattedDate});
+        d.setVisible(false);
+        clearFields();
+
+//        if (e.getSource() == b1) {
+//        System.out.println("Button 1 clicked");
+//    } else if (e.getSource() == b2) {
+//        System.out.println("Button 2 clicked");
+//    }
+    }
+
+    private void clearFields() {
+        tf_name.setText("");
+        tf_surname.setText("");
+        tf_address.setText("");
+        tf_age.setText("");
+        rb_valid_license.setSelected(false);
+        rb_invalid_license.setSelected(false);
+
+        tf_no_of_days.setText("");
+        cb_car_type.setSelectedItem(0);
+        cb_fule_type.setSelectedItem(0);
+        check_milage.setSelected(false);
+        check_coverage.setSelected(false);
+        rent = 0;
+    }
 }

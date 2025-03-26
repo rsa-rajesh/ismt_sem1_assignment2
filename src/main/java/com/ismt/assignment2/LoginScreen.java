@@ -4,6 +4,8 @@
  */
 package com.ismt.assignment2;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +19,8 @@ public class LoginScreen extends javax.swing.JFrame {
      */
     public LoginScreen() {
         initComponents();
+                        CenteredFrame(this);  // <--- Here ya go.
+
     }
 
     /**
@@ -126,20 +130,21 @@ if ("sta001".equals(userName) && "givemethekeys123".equals(password))  {
             
         } else {
             if (userName == null || userName.isEmpty() || userName.isBlank()) {
-//                System.out.println("khali");
                 JOptionPane.showMessageDialog(rootPane, "User name is required");
             } else if (password == null || password.isEmpty() || password.isBlank()) {
                 JOptionPane.showMessageDialog(rootPane, "Password is required");
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Invalid User or Password");
             }
-//            System.out.println("login error");
-//            System.out.println(userName);
-
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-  
+    public void CenteredFrame(javax.swing.JFrame objFrame){
+        Dimension objDimension = Toolkit.getDefaultToolkit().getScreenSize();
+        int iCoordX = (objDimension.width - objFrame.getWidth()) / 2;
+        int iCoordY = (objDimension.height - objFrame.getHeight()) / 2;
+        objFrame.setLocation(iCoordX, iCoordY); 
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
