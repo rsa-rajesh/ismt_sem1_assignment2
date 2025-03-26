@@ -49,7 +49,6 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
     public BookingScreen() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-//this.setUndecorated(true);
         
         
         buttonGroup1.add(rb_valid_license);
