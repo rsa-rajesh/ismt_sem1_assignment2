@@ -23,86 +23,127 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="288" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="progressBar" alignment="1" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="240" max="-2" attributes="0"/>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="progressBar" min="-2" pref="17" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JProgressBar" name="progressBar">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/icon1.png"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="ff" red="33" type="rgb"/>
         </Property>
-        <Property name="iconTextGap" type="int" value="0"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Loading Files...."/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial Black" size="18" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Welcome To WeAreCars"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="How to use App"/>
-      </Properties>
-    </Component>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="img_logo" min="-2" pref="211" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lb_howtouse" pref="386" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbl_loading" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="progressBar" alignment="1" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="lb_howtouse" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="lbl_loading" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="progressBar" min="-2" pref="17" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="img_logo" min="-2" pref="200" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="81" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial Black" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Welcome To WeAreCars"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="How to use App"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_loading">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Loading Files...."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="progressBar">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lb_howtouse">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Bangla MN" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="jLabel5"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="img_logo">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/icon1.png"/>
+            </Property>
+            <Property name="iconTextGap" type="int" value="0"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

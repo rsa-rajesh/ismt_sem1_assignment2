@@ -67,7 +67,6 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
         }
         for (String e1 : fuleTypes) {
             cb_fule_type.addItem(e1);
-
         }
 
         URL imageUrl = getClass().getResource("/images/icon1.png");
@@ -116,7 +115,24 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        data_table = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -216,7 +232,7 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -256,7 +272,7 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
                         .addComponent(check_milage, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_coverage, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bt_book_car, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -313,7 +329,7 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
 
         jTabbedPane1.addTab("Add Booking", jPanel1);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        data_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -336,13 +352,14 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        data_table.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(data_table);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 714, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -350,6 +367,132 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
         );
 
         jTabbedPane1.addTab("View Booking", jPanel2);
+
+        jLabel3.setFont(new java.awt.Font("Kohinoor Telugu", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel3.setText("Help Desk");
+
+        jLabel12.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabel12.setText("Q. How to add a booking?");
+
+        jLabel13.setText("A. To add booking click on a add booking tab and fill all required fields.");
+
+        jLabel14.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabel14.setText("Q. How to view booked car records ?");
+
+        jLabel15.setText("A. To view booked car records click on a view booking tab.");
+
+        jLabel16.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabel16.setText("Q. Can client with age below 16 book a car ?");
+
+        jLabel17.setText("A. No client should be above 16 years old to book a car.");
+
+        jLabel18.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabel18.setText("Q. Dose a cliend a driving license to book a car ?");
+
+        jLabel19.setText("A. Yes client should have a valid driving license to book a car.");
+
+        jLabel20.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabel20.setText("Do you have any more questions?");
+
+        jLabel21.setText("to find a answer visit");
+
+        jLabel22.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel22.setText("www.wearecars.com");
+
+        jLabel23.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel23.setText("www.facebook.com/wearecars");
+
+        jLabel24.setText("or call");
+
+        jLabel25.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel25.setText("Day Support : +977 9845180574");
+
+        jLabel26.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel26.setText("Night Support : +977 9845123456");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(265, 265, 265)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(307, 307, 307)
+                        .addComponent(jLabel24)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(0, 308, Short.MAX_VALUE)
+                                .addComponent(jLabel3)
+                                .addGap(0, 308, Short.MAX_VALUE))
+                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel13)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel15)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel17)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel19)
+                .addGap(69, 69, 69)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel26)
+                .addContainerGap(115, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Help", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -412,22 +555,19 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
                 tf_no_of_days.setEditable(true);
             } else {
                 tf_no_of_days.setEditable(false);
-
             }
         } else {
             if (evt.getExtendedKeyCode() == KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode() == KeyEvent.VK_DELETE) {
                 tf_no_of_days.setEditable(true);
-
             } else {
                 tf_no_of_days.setEditable(false);
-
             }
         }        // TODO add your handling code here:
     }//GEN-LAST:event_tf_no_of_daysKeyPressed
 
     private void bt_book_carActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_book_carActionPerformed
         // TODO add your handling code here:
-        if (tf_name.getText().isBlank() || tf_name.getText().isBlank()) {
+        if (tf_name.getText().isBlank() || tf_name.getText().isEmpty()) {
             JOptionPane.showMessageDialog(rootPane, "First name is required");
             return;
         }
@@ -558,6 +698,7 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
 
     }//GEN-LAST:event_bt_book_carActionPerformed
 
+    
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         try {
@@ -566,11 +707,10 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
             ObjectInputStream input = new ObjectInputStream(file);
             // Method for deserialization of object
             Vector<Vector> tableData = (Vector<Vector>) input.readObject();
-
             input.close();
             file.close();
 
-            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            DefaultTableModel model = (DefaultTableModel) data_table.getModel();
             for (int i = 0; i < tableData.size(); i++) {
                 Vector row = tableData.get(i);
                 model.addRow(new Object[]{row.get(0), row.get(1), row.get(2), row.get(3),
@@ -584,17 +724,14 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        DefaultTableModel model = (DefaultTableModel) data_table.getModel();
         Vector<Vector> tableData = model.getDataVector();
-
         //Saving of object in a file
         try {
             FileOutputStream file = new FileOutputStream("file.bin");
             ObjectOutputStream output = new ObjectOutputStream(file);
-
             // Method for serialization of object
             output.writeObject(tableData);
-
             output.close();
             file.close();
         } catch (Exception ex) {
@@ -615,11 +752,28 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JComboBox<String> cb_fule_type;
     private javax.swing.JCheckBox check_coverage;
     private javax.swing.JCheckBox check_milage;
+    private javax.swing.JTable data_table;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -628,9 +782,9 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lb_date;
     private javax.swing.JRadioButton rb_invalid_license;
     private javax.swing.JRadioButton rb_valid_license;
@@ -651,7 +805,7 @@ public class BookingScreen extends javax.swing.JFrame implements ActionListener 
 
         String formattedDate = dateTime.format(myFormatObj);
 
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        DefaultTableModel model = (DefaultTableModel) data_table.getModel();
         model.addRow(new Object[]{tf_name.getText(), tf_surname.getText(), tf_address.getText(), tf_age.getText(),
             rb_valid_license.isSelected(), tf_no_of_days.getText(), cb_car_type.getSelectedItem(), cb_fule_type.getSelectedItem(),
             check_milage.isSelected(), check_coverage.isSelected(), rent, formattedDate});

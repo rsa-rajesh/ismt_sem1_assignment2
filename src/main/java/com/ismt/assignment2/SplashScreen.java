@@ -38,84 +38,112 @@ public class SplashScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        progressBar = new javax.swing.JProgressBar();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        lbl_loading = new javax.swing.JLabel();
+        progressBar = new javax.swing.JProgressBar();
+        lb_howtouse = new javax.swing.JLabel();
+        img_logo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon1.png"))); // NOI18N
-        jLabel1.setIconTextGap(0);
-
-        jLabel2.setText("Loading Files....");
+        jPanel1.setBackground(new java.awt.Color(51, 255, 51));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel3.setText("Welcome To WeAreCars");
 
         jLabel4.setText("How to use App");
 
+        lbl_loading.setText("Loading Files....");
+
+        progressBar.setForeground(new java.awt.Color(255, 255, 51));
+
+        lb_howtouse.setFont(new java.awt.Font("Bangla MN", 0, 12)); // NOI18N
+        lb_howtouse.setText("jLabel5");
+
+        img_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon1.png"))); // NOI18N
+        img_logo.setIconTextGap(0);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(img_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lb_howtouse, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lbl_loading)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(progressBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel3)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel4)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lb_howtouse)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_loading)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(img_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 81, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(102, 102, 102)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jLabel3)))
-                .addGap(60, 60, 60))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(progressBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-     private static int count;
+    private static int count;
     private static Timer timer1;
-    
+    //this method is used to load and increase progress of progress bar 
        public void loadProgressBar() {
 
                 this.setVisible(true);
+                lb_howtouse.setText("<html><li>To book a car login to app and fill up a booking form</li>" +
+"<li>You need to confirm booking to store booking record</li>" +
+"<li>To view booked card record click on view record tab</li>" +
+"<li>For help and support click help tab</li></html>");
                 URL imageUrl = getClass().getResource("/images/icon1.png");
 if (imageUrl == null) {
     System.out.println("Image not found!");
 } else {
-                               jLabel1.setIcon(new ImageIcon(new ImageIcon(imageUrl).getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT)));
+     img_logo.setIcon(new ImageIcon(new ImageIcon(imageUrl).getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT)));
 }
-
-        ActionListener al = new ActionListener() {
+ActionListener al = new ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 count++;
                 progressBar.setValue(count);
@@ -138,10 +166,12 @@ if (imageUrl == null) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel img_logo;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lb_howtouse;
+    private javax.swing.JLabel lbl_loading;
     private javax.swing.JProgressBar progressBar;
     // End of variables declaration//GEN-END:variables
 }

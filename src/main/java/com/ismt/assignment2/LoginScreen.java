@@ -19,8 +19,7 @@ public class LoginScreen extends javax.swing.JFrame {
      */
     public LoginScreen() {
         initComponents();
-                        CenteredFrame(this);  // <--- Here ya go.
-
+        CenteredFrame(this);  // <--- Here ya go.
     }
 
     /**
@@ -32,27 +31,43 @@ public class LoginScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lb_welcome = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         tf_username = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         tf_password = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Welcome");
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel2.setFont(new java.awt.Font("Kohinoor Telugu", 1, 24)); // NOI18N
         jLabel2.setText("WeAreCars");
 
-        jLabel3.setText("Password:");
+        lb_welcome.setText("Welcome");
 
         jLabel4.setText("User Name:");
 
         tf_username.setText("sta001");
         tf_username.setPreferredSize(new java.awt.Dimension(64, 32));
+        tf_username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_usernameActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Password:");
+
+        tf_password.setText("givemethekeys123");
+        tf_password.setPreferredSize(new java.awt.Dimension(90, 32));
+        tf_password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_passwordActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -61,57 +76,58 @@ public class LoginScreen extends javax.swing.JFrame {
             }
         });
 
-        tf_password.setText("givemethekeys123");
-        tf_password.setPreferredSize(new java.awt.Dimension(90, 32));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(95, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lb_welcome)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_password, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_username, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel2))
+                .addContainerGap(96, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lb_welcome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(tf_username, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(tf_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(tf_password, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tf_username, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)))))
-                .addContainerGap(81, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(68, 68, 68)
-                    .addComponent(jLabel4)
-                    .addContainerGap(281, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addGap(22, 22, 22)
-                .addComponent(tf_username, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(tf_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(104, 104, 104)
-                    .addComponent(jLabel4)
-                    .addContainerGap(186, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -139,6 +155,14 @@ if ("sta001".equals(userName) && "givemethekeys123".equals(password))  {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void tf_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_usernameActionPerformed
+
+    private void tf_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_passwordActionPerformed
+
     public void CenteredFrame(javax.swing.JFrame objFrame){
         Dimension objDimension = Toolkit.getDefaultToolkit().getScreenSize();
         int iCoordX = (objDimension.width - objFrame.getWidth()) / 2;
@@ -148,10 +172,11 @@ if ("sta001".equals(userName) && "givemethekeys123".equals(password))  {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lb_welcome;
     private javax.swing.JPasswordField tf_password;
     private javax.swing.JTextField tf_username;
     // End of variables declaration//GEN-END:variables

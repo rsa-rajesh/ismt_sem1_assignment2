@@ -14,7 +14,4 @@ public class Assignment2 {
         SplashScreen ss =    new SplashScreen();
            ss.loadProgressBar();
     }
-            
-                 
-
 }

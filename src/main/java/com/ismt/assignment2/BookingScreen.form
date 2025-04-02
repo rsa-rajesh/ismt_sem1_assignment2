@@ -91,7 +91,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
@@ -144,7 +144,7 @@
                               <Component id="check_coverage" min="-2" pref="241" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="136" max="32767" attributes="0"/>
+                      <EmptySpace pref="223" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -411,7 +411,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" alignment="0" pref="635" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" pref="714" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -428,7 +428,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="jTable1">
+                <Component class="javax.swing.JTable" name="data_table">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="12" rowCount="0">
@@ -511,12 +511,233 @@
                       </TableColumnModel>
                     </Property>
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                      <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                     </Property>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Help">
+                <Property name="tabTitle" type="java.lang.String" value="Help"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="265" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel22" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="jLabel21" min="-2" pref="130" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="230" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel23" min="-2" pref="199" max="-2" attributes="0"/>
+                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel25" alignment="0" min="-2" pref="199" max="-2" attributes="0"/>
+                                  <Component id="jLabel26" alignment="0" min="-2" pref="199" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="307" max="-2" attributes="0"/>
+                              <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel17" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel19" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel12" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel13" min="-2" pref="659" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="308" max="32767" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="308" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel14" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel16" max="32767" attributes="0"/>
+                          <Component id="jLabel18" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="115" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Kohinoor Telugu" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="33" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Help Desk"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel12">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Helvetica Neue" size="13" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Q. How to add a booking?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel13">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="A. To add booking click on a add booking tab and fill all required fields."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel14">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Helvetica Neue" size="13" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Q. How to view booked car records ?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel15">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="A. To view booked car records click on a view booking tab."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel16">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Helvetica Neue" size="13" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Q. Can client with age below 16 book a car ?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel17">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="A. No client should be above 16 years old to book a car."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel18">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Helvetica Neue" size="13" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Q. Dose a cliend a driving license to book a car ?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel19">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="A. Yes client should have a valid driving license to book a car."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel20">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Helvetica Neue" size="13" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Do you have any more questions?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel21">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="to find a answer visit"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel22">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="www.wearecars.com"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel23">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="www.facebook.com/wearecars"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel24">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="or call"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel25">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Day Support : +977 9845180574"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel26">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Night Support : +977 9845123456"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
